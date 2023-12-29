@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
