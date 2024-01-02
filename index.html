@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      function calculate() {
+        let num1 = parseFloat(document.getElementById("n1").value);
+        let num2 = parseFloat(document.getElementById("n2").value);
+
+        let operator = document.getElementById("operator").value;
+        let result;
+
+        if (operator == "+") {
+          result = num1 + num2;
+        }
+        if (operator == "*") {
+          result = num1 * num2;
+        }
+        if (operator == "-") {
+          result = num1 - num2;
+        }
+        if (operator == "/") {
+          result = num1 / num2;
+        }
+
+        document.getElementById("result").value = result;
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -20,14 +44,15 @@
       src="https://cdn.britannica.com/22/75922-050-D3982BD0/flowers-fruits-garden-strawberry-plant-species.jpg"
     />
 
-    <input type="text" placeholder="FIRST NUMBER" /><br /><br />
-    <input type="text" placeholder="SECOND NUMBER" /><br /><br />
-    <select>
+    <input type="text" placeholder="FIRST NUMBER" id="n1" /><br /><br />
+    <input type="text" placeholder="SECOND NUMBER" id="n2" /><br /><br />
+    <select id="operator">
       <option value="+">+</option>
       <option value="-">-</option>
       <option value="*">*</option>
       <option value="/">/</option></select
     ><br /><br />
-    <button>CALCULATE</button>
+    <button onclick="calculate()">CALCULATE</button><br /><br />
+    <input type="text" id="result" />
   </body>
 </html>
